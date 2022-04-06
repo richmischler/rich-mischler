@@ -1,0 +1,70 @@
+{
+  "name": "rich-mischler",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:richmischler/rich-mischler.git"
+  },
+  "scripts": {
+    "build": "yarn build:ui",
+    "build:ui": "node scripts/ui-fom-env.js",
+    "lint": "yarn lint:ui",
+    "lint:ui": "yarn workspace rich-mischler-ui run lint",
+    "start": "yarn workspace rich-mischler-ui run start"
+  },
+  "author": {
+    "name": "Rich Mischler",
+    "email": "richmischler@gmail.com",
+    "url": "https://richmischler.com"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.147.0",
+    "@aws-cdk/assertions": "^1.147.0",
+    "@types/glob": "^7.2.0",
+    "@types/node": "^12",
+    "@types/ora": "^3.2.0",
+    "@types/prompts": "^2.0.14",
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
+    "aws-cdk": "^1.147.0",
+    "dotenv-cli": "^4.1.1",
+    "esbuild": "^0.14.11",
+    "eslint": "^8",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "json-schema": "^0.4.0",
+    "npm-check-updates": "^12",
+    "prettier": "^2.5.1",
+    "ts-node": "^9",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.147.0",
+    "@aws-cdk/aws-cloudfront-origins": "^1.147.0",
+    "@aws-cdk/aws-iam": "^1.147.0",
+    "@aws-cdk/aws-lambda": "^1.147.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.147.0",
+    "@aws-cdk/aws-s3": "^1.147.0",
+    "@aws-cdk/aws-s3-assets": "^1.147.0",
+    "@aws-cdk/aws-s3-deployment": "^1.147.0",
+    "@aws-cdk/aws-secretsmanager": "^1.147.0",
+    "@aws-cdk/core": "^1.147.0",
+    "constructs": "^3.2.27",
+    "dotenv": "^11.0.0"
+  },
+  "license": "UNLICENSED",
+  "version": "0.0.0",
+  "resolutions": {
+    "@material-ui/core": "4.12.3",
+    "@material-ui/styles": "4.11.4",
+    "@material-ui/system": "4.12.1",
+    "@material-ui/types": "5.1.0",
+    "@material-ui/utils": "^4.11.2"
+  },
+  "private": true,
+  "workspaces": [
+    "ui"
+  ]
+}
