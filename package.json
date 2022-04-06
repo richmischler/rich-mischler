@@ -7,9 +7,11 @@
   "scripts": {
     "build": "yarn build:ui",
     "build:ui": "node scripts/ui-fom-env.js",
+    "deploy": "yarn cdk deploy",
     "lint": "yarn lint:ui",
     "lint:ui": "yarn workspace rich-mischler-ui run lint",
-    "start": "yarn workspace rich-mischler-ui run start"
+    "start": "yarn workspace rich-mischler-ui run start",
+    "synth": "yarn cdk synth"
   },
   "author": {
     "name": "Rich Mischler",

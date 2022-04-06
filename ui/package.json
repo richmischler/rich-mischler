@@ -1,14 +1,14 @@
 {
   "name": "rich-mischler-ui",
+  "homepage": "https://richmischler.com",
   "repository": {
     "type": "git",
     "url": "git@github.com:richmischler/rich-mischler.git"
   },
   "scripts": {
-    "build": "npx dotenv -e ../.env -- node --max_old_space_size=4096 yarn build",
+    "build": "npx dotenv -e ../.env -- node --max_old_space_size=4096 $(yarn bin react-scripts) build",
     "lint": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src",
-    "start": "npx dotenv -e ../.env -- react-scripts start",
-    "test": "npx dotenv -e ../.env -- jest --passWithNoTests --all"
+    "start": "npx dotenv -e ../.env -- react-scripts start"
   },
   "author": {
     "name": "Rich Mischler",
