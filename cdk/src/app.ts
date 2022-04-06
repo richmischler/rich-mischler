@@ -5,6 +5,7 @@ import * as iam from "@aws-cdk/aws-iam";
 import * as s3 from "@aws-cdk/aws-s3";
 import * as s3deployment from "@aws-cdk/aws-s3-deployment";
 import * as cdk from "@aws-cdk/core";
+import * as acm from "@aws-cdk/aws-certificatemanager";
 
 export class RichMischlerStack extends cdk.Stack {
   constructor(
@@ -62,10 +63,20 @@ export class RichMischlerStack extends cdk.Stack {
       },
     ];
 
+    const certificate = acm.Certificate.fromCertificateArn(
+      this,
+      "Certificate",
+      "arn:aws:acm:us-east-1:676816551480:certificate/671ad88f-569f-4bee-ad6a-f242c7ea3f65"
+    );
+
     const distributionProps: cloudfront.DistributionProps = {
       errorResponses: errorResponses,
       defaultBehavior: defaultBehaviorOptions,
-      domainNames: ["richmischler.com"]
+      domainNames: [
+        "richmischler.com",
+        "www.richmischler.com"
+      ],
+      certificate: certificate,
     };
 
     const distribution = new cloudfront.Distribution(
@@ -73,6 +84,7 @@ export class RichMischlerStack extends cdk.Stack {
       "Distribution",
       distributionProps
     );
+
     new s3deployment.BucketDeployment(this, "Deployment", {
       sources: [s3deployment.Source.asset(`./ui/build`)],
       cacheControl: [
@@ -85,7 +97,7 @@ export class RichMischlerStack extends cdk.Stack {
     });
 
     new cdk.CfnOutput(this, "CloudfrontHost", {
-      value: `https://${distribution.distributionDomainName}`,
+      value: `https://${distribution.domainName}`,
     });
 
     new cdk.CfnOutput(this, "ContentBucket", {

@@ -1,6 +1,6 @@
 import { Grid, Link, ListItem, ListItemIcon, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Email, Phone, Web } from "@material-ui/icons";
+import { Email, Web } from "@material-ui/icons";
 import { FunctionComponent } from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 export const Footer: FunctionComponent = () => {
   const classes = useStyles();
   const email = "richmischer@gmail.com";
-  const phone = "317-658-3828";
   const li = "https://www.linkedin.com/in/richardmischler/";
 
   return (
@@ -49,15 +48,6 @@ export const Footer: FunctionComponent = () => {
                 <ListItem>
                   <ListItemIcon>
                     <Email />
-                  </ListItemIcon>
-                </ListItem>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href={`tel:${phone}`}>
-                <ListItem>
-                  <ListItemIcon>
-                    <Phone />
                   </ListItemIcon>
                 </ListItem>
               </Link>
