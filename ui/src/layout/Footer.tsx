@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme: Theme) => ({
       flexDirection: "row",
       alignItems: "center",
       "& svg": {
-        fontSize: "0.9rem",
+        fontSize: "2.0rem",
         marginRight: 2,
       },
       padding: theme.spacing(1),
     },
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
   },
