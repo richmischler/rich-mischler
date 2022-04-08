@@ -1,8 +1,8 @@
-import { Grid, ListItem, ListItemIcon, Paper } from "@material-ui/core";
+import { Grid, ListItem, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FunctionComponent } from "react";
 // @ts-ignore
-import background from "../resources/home.jpg";
+import background from "../resources/home.png";
 import { Resume } from "./Resume";
 
 const useStyles = makeStyles(() => ({
@@ -31,9 +31,7 @@ export const Home: FunctionComponent = () => {
           <Grid container>
             <Grid item>
               <ListItem>
-                <ListItemIcon>
-                  <Resume />
-                </ListItemIcon>
+                <Resume />
               </ListItem>
             </Grid>
           </Grid>
