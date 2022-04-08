@@ -1,0 +1,26 @@
+{
+  "bb": {
+    "year": "Oct 2016 - Present",
+    "title": "Senior Software Engineer - DevOps",
+    "company": "Blackboard",
+    "description": "Responsible for building a multitude of apps and services, using Javascript, Typescript, Java, Python, PHP, React, Kubernetes, GraphQL, Terraform, Groovy, Docker, Jenkins CI/CD, AWS Services (AppSync, EC2, RDS, CDK, Step Functions, Lambda, Glue, Athena, S3, Trusted Advisor, Support, Cloudwatch, AppSync, EventBridge, Parameter Store)"
+  },
+  "fusion": {
+    "year": "Feb 2013 - Oct 2016",
+    "title": "Test Automation Engineer / Team Lead",
+    "company": "Fusion Alliance",
+    "description": "Responsible for building consulting with different companies and building out test automation frameworks for them."
+  },
+  "as": {
+    "year": "Apr 2010 - Feb 2013",
+    "title": "Test Automation Engineer",
+    "company": "Allied Solutions",
+    "description": "Responsible for building out test automation frameworks for the team and training other team members."
+  },
+  "oa": {
+    "year": "Jul 2008 - Oct 2009",
+    "title": "Test Automation Engineer",
+    "company": "Office Arrow",
+    "description": "Responsible for building manual testing and building test automation for start-up."
+  }
+}

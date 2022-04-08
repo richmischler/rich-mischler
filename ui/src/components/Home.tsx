@@ -21,20 +21,15 @@ export const Home: FunctionComponent = () => {
   return (
     <Paper className={classes.paperContainer}>
       <Grid
-        component={"footer"}
         container
         direction={"column"}
         justifyContent={"center"}
         alignItems={"center"}
       >
         <Grid item>
-          <Grid container>
-            <Grid item>
-              <ListItem>
-                <Resume active={match?.params.page === "resume"} />
-              </ListItem>
-            </Grid>
-          </Grid>
+          <ListItem>
+            <Resume active={match?.params.page === "resume"} />
+          </ListItem>
         </Grid>
       </Grid>
     </Paper>

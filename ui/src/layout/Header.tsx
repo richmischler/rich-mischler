@@ -1,5 +1,11 @@
-import { Grid, Link, ListItem, ListItemIcon } from "@material-ui/core";
-import { HomeOutlined, Subject } from "@material-ui/icons";
+import {
+  Grid,
+  Link,
+  ListItem,
+  ListItemIcon,
+  Typography,
+} from "@material-ui/core";
+import { HomeOutlined } from "@material-ui/icons";
 import { FunctionComponent } from "react";
 
 export const Header: FunctionComponent = () => {
@@ -11,7 +17,7 @@ export const Header: FunctionComponent = () => {
             <Link href={`/resume`}>
               <ListItem>
                 <ListItemIcon>
-                  <Subject />
+                  <Typography>Resume</Typography>
                 </ListItemIcon>
               </ListItem>
             </Link>
