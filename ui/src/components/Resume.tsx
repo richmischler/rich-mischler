@@ -1,18 +1,32 @@
-import { Box, ListItemText, Paper, Theme, Typography } from "@material-ui/core";
+import {
+  Box,
+  Grid,
+  ListItemText,
+  Paper,
+  Theme,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FunctionComponent } from "react";
+
+export interface ResumeProps {
+  readonly active?: boolean | undefined;
+}
 
 const useStyles = makeStyles((theme: Theme) => ({
   resume: {
     marginTop: theme.spacing(4),
     padding: theme.spacing(2, 2, 2, 2),
     maxWidth: "100vh",
-    color: theme.palette.primary.main,
   },
 }));
 
-export const Resume: FunctionComponent = () => {
+export const Resume: FunctionComponent<ResumeProps> = ({ active }) => {
   const classes = useStyles();
+
+  if (!active) {
+    return <Grid />;
+  }
 
   return (
     <Paper className={classes.resume}>

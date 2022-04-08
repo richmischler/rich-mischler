@@ -1,29 +1,32 @@
-import { AppBar, Grid, IconButton, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Link, ListItem, ListItemIcon } from "@material-ui/core";
+import { HomeOutlined, Subject } from "@material-ui/icons";
 import { FunctionComponent } from "react";
 
-const useStyles = makeStyles(() => ({
-  header: {
-    gridArea: "header",
-    boxShadow: "0 0 3px 0 rgba(0,0,0, 0.1)",
-  },
-}));
-
 export const Header: FunctionComponent = () => {
-  const classes = useStyles();
-
   return (
-    <AppBar
-      className={classes.header}
-      position="sticky"
-      color="inherit"
-      data-testid="app-header"
-    >
-      <Grid container justifyContent={"flex-end"} alignItems={"center"}>
-        <IconButton edge="start" color="inherit" aria-label="menu">
-          <Typography variant="h3" color="inherit" component="div"></Typography>
-        </IconButton>
+    <Grid container justifyContent={"flex-end"}>
+      <Grid item>
+        <Grid container>
+          <Grid item>
+            <Link href={`/resume`}>
+              <ListItem>
+                <ListItemIcon>
+                  <Subject />
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link href={`/`}>
+              <ListItem>
+                <ListItemIcon>
+                  <HomeOutlined />
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+          </Grid>
+        </Grid>
       </Grid>
-    </AppBar>
+    </Grid>
   );
 };

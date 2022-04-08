@@ -1,35 +1,11 @@
-import { Grid, Link, ListItem, ListItemIcon, Theme } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import { Email, Web } from "@material-ui/icons";
+import { Grid, Link, ListItem, ListItemIcon } from "@material-ui/core";
+import { Email, LinkedIn, Phone } from "@material-ui/icons";
 import { FunctionComponent } from "react";
 
-const useStyles = makeStyles((theme: Theme) => ({
-  footer: {
-    marginTop: theme.spacing(4),
-    padding: theme.spacing(1, 1, 1, 1),
-    color: theme.palette.primary.main,
-    backgroundColor: theme.palette.background.default,
-    "& a": {
-      color: "inherit",
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      "& svg": {
-        fontSize: "2.0rem",
-        marginRight: 2,
-      },
-      padding: theme.spacing(1),
-    },
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-    },
-  },
-}));
-
 export const Footer: FunctionComponent = () => {
-  const classes = useStyles();
   const email = "richmischer@gmail.com";
   const li = "https://www.linkedin.com/in/richardmischler/";
+  const phone = "317-658-3828";
 
   return (
     <>
@@ -39,7 +15,6 @@ export const Footer: FunctionComponent = () => {
         direction={"column"}
         justifyContent={"center"}
         alignItems={"center"}
-        className={classes.footer}
       >
         <Grid item>
           <Grid container>
@@ -56,7 +31,16 @@ export const Footer: FunctionComponent = () => {
               <Link href={li} target="_blank">
                 <ListItem>
                   <ListItemIcon>
-                    <Web />
+                    <LinkedIn />
+                  </ListItemIcon>
+                </ListItem>
+              </Link>
+            </Grid>
+            <Grid item>
+              <Link href={`tel:${phone}`} target="_blank">
+                <ListItem>
+                  <ListItemIcon>
+                    <Phone />
                   </ListItemIcon>
                 </ListItem>
               </Link>

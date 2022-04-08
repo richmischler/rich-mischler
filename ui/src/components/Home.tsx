@@ -1,23 +1,23 @@
 import { Grid, ListItem, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FunctionComponent } from "react";
+import { useMatch } from "react-router";
 // @ts-ignore
-import background from "../resources/home.png";
+import background from "../resources/home.jpg";
 import { Resume } from "./Resume";
 
 const useStyles = makeStyles(() => ({
   paperContainer: {
     backgroundImage: `url(${background})`,
     minHeight: "100vh",
-    position: "relative",
     backgroundSize: "cover",
-    backgroundPosition: "center",
-    zIndex: -1,
   },
 }));
 
 export const Home: FunctionComponent = () => {
   const classes = useStyles();
+  const match = useMatch("/:page");
+
   return (
     <Paper className={classes.paperContainer}>
       <Grid
@@ -31,7 +31,7 @@ export const Home: FunctionComponent = () => {
           <Grid container>
             <Grid item>
               <ListItem>
-                <Resume />
+                <Resume active={match?.params.page === "resume"} />
               </ListItem>
             </Grid>
           </Grid>
