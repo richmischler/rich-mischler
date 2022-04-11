@@ -1,6 +1,6 @@
+import { Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FunctionComponent } from "react";
-import { Paper } from "@material-ui/core";
 import about from "../../resources/about.json";
 
 const useStyles = makeStyles((theme) => ({
