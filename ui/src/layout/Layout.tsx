@@ -2,7 +2,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { FunctionComponent } from "react";
 import { Outlet } from "react-router-dom";
-import { Home } from "../components/Home";
+import { Home } from "../components/home/Home";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 

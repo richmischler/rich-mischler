@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./components/Home";
-import { Resume } from "./components/Resume";
+import { Home } from "./components/home/Home";
+import { Resume } from "./components/resume/Resume";
 import { Layout } from "./layout/Layout";
 
 export const App: FunctionComponent = () => {

@@ -3,14 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import { FunctionComponent } from "react";
 import { useMatch } from "react-router";
 // @ts-ignore
-import background from "../resources/home.jpg";
-import { Resume } from "./Resume";
+import background from "../../resources/home.jpg";
+import { Resume } from "../resume/Resume";
 
 const useStyles = makeStyles(() => ({
-  paperContainer: {
+  paper: {
     backgroundImage: `url(${background})`,
-    minHeight: "100vh",
     backgroundSize: "cover",
+    minHeight: "100vh",
   },
 }));
 
@@ -19,7 +19,7 @@ export const Home: FunctionComponent = () => {
   const match = useMatch("/:page");
 
   return (
-    <Paper className={classes.paperContainer}>
+    <Paper className={classes.paper}>
       <Grid
         container
         direction={"column"}

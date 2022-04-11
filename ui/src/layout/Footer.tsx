@@ -19,7 +19,7 @@ export const Footer: FunctionComponent = () => {
         <Grid item>
           <Grid container>
             <Grid item>
-              <Link href={`mailto:${email}`}>
+              <Link href={`mailto:${email}`} target={"_blank"}>
                 <ListItem>
                   <ListItemIcon>
                     <Email />
