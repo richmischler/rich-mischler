@@ -1,12 +1,9 @@
 import { Grid, Link, ListItem, ListItemIcon } from "@material-ui/core";
 import { Email, LinkedIn, Phone } from "@material-ui/icons";
 import { FunctionComponent } from "react";
+import about from "../resources/about.json";
 
 export const Footer: FunctionComponent = () => {
-  const email = "richmischer@gmail.com";
-  const li = "https://www.linkedin.com/in/richardmischler/";
-  const phone = "317-658-3828";
-
   return (
     <>
       <Grid
@@ -19,7 +16,7 @@ export const Footer: FunctionComponent = () => {
         <Grid item>
           <Grid container>
             <Grid item>
-              <Link href={`mailto:${email}`} target={"_blank"}>
+              <Link href={`mailto:${about.me.email}`} target={"_blank"}>
                 <ListItem>
                   <ListItemIcon>
                     <Email />
@@ -28,7 +25,7 @@ export const Footer: FunctionComponent = () => {
               </Link>
             </Grid>
             <Grid item>
-              <Link href={li} target="_blank">
+              <Link href={about.me.linkedin} target="_blank">
                 <ListItem>
                   <ListItemIcon>
                     <LinkedIn />
@@ -37,7 +34,7 @@ export const Footer: FunctionComponent = () => {
               </Link>
             </Grid>
             <Grid item>
-              <Link href={`tel:${phone}`} target="_blank">
+              <Link href={`tel:${about.me.phone}`} target="_blank">
                 <ListItem>
                   <ListItemIcon>
                     <Phone />

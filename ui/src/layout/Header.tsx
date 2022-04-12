@@ -23,6 +23,15 @@ export const Header: FunctionComponent = () => {
             </Link>
           </Grid>
           <Grid item>
+            <Link href={`/contact`}>
+              <ListItem>
+                <ListItemIcon>
+                  <Typography>Contact</Typography>
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+          </Grid>
+          <Grid item>
             <Link href={`/`}>
               <ListItem>
                 <ListItemIcon>

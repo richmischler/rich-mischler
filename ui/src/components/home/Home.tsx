@@ -4,6 +4,7 @@ import { FunctionComponent } from "react";
 import { useMatch } from "react-router";
 // @ts-ignore
 import background from "../../resources/home.jpg";
+import { Contact } from "../contact/Contact";
 import { Resume } from "../resume/Resume";
 
 const useStyles = makeStyles(() => ({
@@ -29,6 +30,11 @@ export const Home: FunctionComponent = () => {
         <Grid item>
           <ListItem>
             <Resume active={match?.params.page === "resume"} />
+          </ListItem>
+        </Grid>
+        <Grid item>
+          <ListItem>
+            <Contact active={match?.params.page === "contact"} />
           </ListItem>
         </Grid>
       </Grid>
