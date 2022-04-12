@@ -1,7 +1,6 @@
 import {
   Button,
   Card,
-  CardContent,
   CardMedia,
   Dialog,
   DialogActions,
@@ -32,11 +31,9 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     display: "flex",
-    flexDirection: "row",
-  },
-  cardContent: {
-    display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   dialogContent: {
     display: "flex",
@@ -76,12 +73,6 @@ export const Contact: FunctionComponent<ContactProps> = ({ active }) => {
             <CardMedia>
               <img src={pic} alt={"Contact Photo"} />
             </CardMedia>
-            <CardContent className={classes.cardContent}>
-              <Typography variant={"h3"}>{about.me.name}</Typography>
-              <Typography variant={"subtitle1"}>
-                {about.me.description}
-              </Typography>
-            </CardContent>
           </Card>
         </Grid>
         <Grid container direction={"column"} justifyContent={"center"}>
