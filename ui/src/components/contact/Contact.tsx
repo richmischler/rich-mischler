@@ -14,7 +14,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Email, LinkedIn, Map, Phone } from "@material-ui/icons";
+import { Email, LinkedIn, Map } from "@material-ui/icons";
 import { FunctionComponent } from "react";
 import { useNavigate } from "react-router-dom";
 import about from "../../resources/about.json";
@@ -99,20 +99,6 @@ export const Contact: FunctionComponent<ContactProps> = ({ active }) => {
                 <ListItemText>
                   <Typography component="span" variant="subtitle2">
                     LinkedIn
-                  </Typography>
-                </ListItemText>
-              </ListItem>
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link href={`tel:${about.me.phone}`} target="_blank">
-              <ListItem>
-                <ListItemIcon>
-                  <Phone />
-                </ListItemIcon>
-                <ListItemText>
-                  <Typography component="span" variant="subtitle2">
-                    {about.me.phone}
                   </Typography>
                 </ListItemText>
               </ListItem>

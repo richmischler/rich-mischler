@@ -1,5 +1,5 @@
 import { Grid, Link, ListItem, ListItemIcon } from "@material-ui/core";
-import { Email, LinkedIn, Phone } from "@material-ui/icons";
+import { Email, LinkedIn } from "@material-ui/icons";
 import { FunctionComponent } from "react";
 import about from "../resources/about.json";
 
@@ -29,15 +29,6 @@ export const Footer: FunctionComponent = () => {
                 <ListItem>
                   <ListItemIcon>
                     <LinkedIn />
-                  </ListItemIcon>
-                </ListItem>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href={`tel:${about.me.phone}`} target="_blank">
-                <ListItem>
-                  <ListItemIcon>
-                    <Phone />
                   </ListItemIcon>
                 </ListItem>
               </Link>
