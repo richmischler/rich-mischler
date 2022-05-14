@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FunctionComponent } from "react";
+import { useNavigate } from "react-router-dom";
 import services from "../../resources/services.json";
 // @ts-ignore
 import site from "../../resources/site.jpg";
@@ -30,6 +31,11 @@ export const useStyles = makeStyles(() => ({
 
 export const Services: FunctionComponent<ServicesProps> = ({ active }) => {
   const classes = useStyles();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    return navigate("/contact");
+  };
 
   if (!active) {
     return <div />;
@@ -47,7 +53,9 @@ export const Services: FunctionComponent<ServicesProps> = ({ active }) => {
         <Typography variant="body2">{services.ui.description}</Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button onClick={handleClick} size="small">
+          Contact Me
+        </Button>
       </CardActions>
     </Card>
   );
