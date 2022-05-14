@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Contact } from "./components/contact/Contact";
 import { Home } from "./components/home/Home";
 import { Resume } from "./components/resume/Resume";
+import { Services } from "./components/services/Services";
 import { Layout } from "./layout/Layout";
 
 export const App: FunctionComponent = () => {
@@ -11,6 +12,7 @@ export const App: FunctionComponent = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="services" element={<Services />} />
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Route>

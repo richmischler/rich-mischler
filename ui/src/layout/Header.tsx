@@ -14,6 +14,15 @@ export const Header: FunctionComponent = () => {
       <Grid item>
         <Grid container>
           <Grid item>
+            <Link href={`/services`}>
+              <ListItem>
+                <ListItemIcon>
+                  <Typography>Services</Typography>
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+          </Grid>
+          <Grid item>
             <Link href={`/resume`}>
               <ListItem>
                 <ListItemIcon>

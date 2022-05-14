@@ -1,0 +1,8 @@
+{
+  "ui": {
+    "price": "$2,500",
+    "title": "Build a Modern Serverless Website",
+    "timeline": "1 Week",
+    "description": "I will build you a site for your domain built using React, Typescript and deployed using CDK with S3 and Cloudfront UI that costs next to nothing to run."
+  }
+}

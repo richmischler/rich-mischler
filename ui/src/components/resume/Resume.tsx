@@ -8,7 +8,6 @@ import {
 } from "@material-ui/lab";
 import { FunctionComponent } from "react";
 import experiences from "../../resources/experience.json";
-import { HomeDetails } from "../home/HomeDetails";
 import { Event } from "./Event";
 
 export interface ResumeProps {
@@ -17,7 +16,7 @@ export interface ResumeProps {
 
 export const Resume: FunctionComponent<ResumeProps> = ({ active }) => {
   if (!active) {
-    return <HomeDetails />;
+    return <div />;
   }
 
   return (

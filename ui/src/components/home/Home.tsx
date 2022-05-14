@@ -6,6 +6,8 @@ import { useMatch } from "react-router";
 import background from "../../resources/home.jpg";
 import { Contact } from "../contact/Contact";
 import { Resume } from "../resume/Resume";
+import { Services } from "../services/Services";
+import { HomeDetails } from "./HomeDetails";
 
 const useStyles = makeStyles(() => ({
   paper: {
@@ -27,6 +29,12 @@ export const Home: FunctionComponent = () => {
         justifyContent={"center"}
         alignItems={"center"}
       >
+        <HomeDetails />
+        <Grid item>
+          <ListItem>
+            <Services active={match?.params.page === "services"} />
+          </ListItem>
+        </Grid>
         <Grid item>
           <ListItem>
             <Resume active={match?.params.page === "resume"} />
