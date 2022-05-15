@@ -3,6 +3,9 @@ import { FunctionComponent } from "react";
 import about from "../../resources/about.json";
 
 const useStyles = makeStyles((theme) => ({
+  padding: {
+    padding: theme.spacing(1, 1, 1, 1),
+  },
   header2: {
     color: theme.palette.secondary.contrastText,
     fontSize: 50,
@@ -25,9 +28,9 @@ export const HomeDetails: FunctionComponent = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <div className={classes.padding}>
       <h2 className={classes.header2}>{about.me.name}</h2>
       <p className={classes.description}>{about.me.description}</p>
-    </>
+    </div>
   );
 };
